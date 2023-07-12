@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="
+http://www.springframework.org/schema/context" 
+xmlns:p="http://www.springframework.org/schema/p" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!-- this is our beans -->
+<bean class="com.SpringCore.Ref.B" name="refB" p:name="Praj" p:region="jaislmer"></bean>
+<!-- <bean class="com.SpringCore.Ref.A" name="refA">
+<property name="a" value="874983"></property>
+<property name="b">
+<ref bean="refB"/>
+</property>
+</bean>
+ -->
+ 
+ <bean class="com.SpringCore.Ref.A" name="refA">
+ <property name="a" value="7642873"></property>
+ <property name="b" ref="refB"></property>
+ </bean>
+<!--  <bean class="com.SpringCore.Ref.A" name="refA" p:a="8465873" p:b-ref="refB"></bean>
+  -->
+</beans>
