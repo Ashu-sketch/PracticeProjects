@@ -1,0 +1,41 @@
+package com.registerfrom.index.signin;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class Info
+ */
+@WebServlet("/Info")
+public class Info extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String fname=request.getParameter("fname");
+		String lname=request.getParameter("lname");
+		String gender=request.getParameter("gender");
+		String psw=request.getParameter("psw");
+		String email=request.getParameter("email");
+		
+		
+		
+		
+		PrintWriter out=response.getWriter();
+		
+		
+		out.println("your First name:"+ fname);
+		out.println("your Last name:"+ fname);
+		out.println("your Gender name:"+ gender);
+		out.println("your Password:"+ psw);
+		out.println("your Email:"+ email);
+	}
+
+}
